@@ -1,14 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Todo from './components/Todo.jsx'
+import Title from './components/Title.jsx'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1>This is my first react app</h1>
+      <Title />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      
     </>
   )
 }
