@@ -1,7 +1,8 @@
-function Todo() {
+function Todo({ task, description }) {
     return (
         <div className="todo-item">
-            <h2>Finishing React crash course</h2>
+            <h2>{ task }</h2>
+            <p>{ description }</p>
             <button>delete</button>
         </div>
     )
