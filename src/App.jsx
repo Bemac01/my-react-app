@@ -1,16 +1,20 @@
-import Todo from './components/Todo.jsx'
-import Title from './components/Title.jsx'
 import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home.jsx'
+import Contact from './pages/Contact.jsx'
+import About from './pages/About.jsx'
 
 function App() {
 
   return (
     <>
-      <Title />
-      <Todo task="Learn React" description="Code along and take notes"/>
-      <Todo task="fininsh App" description="4hrs Everyday input"/>
-      <Todo task="Land a Remote job" description="Apply for Remote jobs"/>
-      <Todo task="Earn $10k+" description="Live life and relax"/>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/About' element={<About />}/>
+          <Route path='/Contact' element={<Contact />}/>
+        </Routes>
+      </Router>
     </>
   )
 }
